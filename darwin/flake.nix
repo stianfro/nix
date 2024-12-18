@@ -31,6 +31,8 @@
             pkgs.nodejs_23
             pkgs.python3Minimal
             pkgs.btop
+            pkgs.tree
+            pkgs.babelfish
           ];
 
         fonts.packages = [
