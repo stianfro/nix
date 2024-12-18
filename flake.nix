@@ -85,9 +85,11 @@
               "/Applications/Firefox.app"
               "/Applications/WezTerm.app"
             ];
+            dock.show-recents = false;
             finder.FXPreferredViewStyle = "clmv";
             NSGlobalDomain.AppleICUForce24HourTime = true;
             NSGlobalDomain.AppleInterfaceStyle = "Dark";
+            NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = false;
           };
 
         # Necessary for using flakes on this system.
