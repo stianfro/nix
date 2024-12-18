@@ -1,5 +1,5 @@
 {
-  description = "Stians darwin flake";
+  description = "Stian's darwin flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
