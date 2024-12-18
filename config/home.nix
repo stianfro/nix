@@ -49,6 +49,11 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+
+    # ".ssh/config".text = ''
+    #   Host *
+    #     UseKeychain yes
+    # '';
   };
 
   # Home Manager can also manage your environment variables through
@@ -68,6 +73,7 @@
   #  /etc/profiles/per-user/stianfroystein/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
+    HOMEBREW_NO_ENV_HINTS = 1;
     EDITOR = "nvim";
   };
 
@@ -91,5 +97,11 @@
 
   programs.k9s = {
     enable = true;
+  };
+
+  programs.ssh = {
+    enable = true;
+    addKeysToAgent = "yes";
+    extraConfig = "UseKeychain yes";
   };
 }
