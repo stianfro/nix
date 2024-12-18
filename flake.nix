@@ -12,7 +12,6 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager }:
     let
-      config_default = import ./config/default.nix;
       config_darwin = import ./config/darwin.nix;
     in
     {
@@ -20,7 +19,6 @@
       # $ darwin-rebuild build --flake .#simple
       darwinConfigurations.m1 = nix-darwin.lib.darwinSystem {
         modules = [
-          config_default
           config_darwin
           nix-homebrew.darwinModules.nix-homebrew
           {
