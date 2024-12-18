@@ -30,7 +30,7 @@
             pkgs.lazygit
             pkgs.ripgrep
             pkgs.nodejs-slim
-            pkgs.python
+            pkgs.python3Minimal
             pkgs.btop
           ];
 
