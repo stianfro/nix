@@ -15,6 +15,7 @@
         environment.systemPackages =
           [
             pkgs.neovim
+            pkgs.tmux
           ];
 
         # Necessary for using flakes on this system.
