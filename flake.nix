@@ -5,9 +5,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
     let
       configuration = { pkgs, config, ... }: {
         # List packages installed in system profile. To search by name, run:
@@ -65,8 +66,19 @@
     {
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .#simple
-      darwinConfigurations."m1" = nix-darwin.lib.darwinSystem {
-        modules = [ configuration ];
+      darwinConfigurations.m1 = nix-darwin.lib.darwinSystem {
+        modules = [
+          configuration
+          nix-homebrew.darwinModules.nix-homebrew
+          {
+            nix-homebrew = {
+              enable = true;
+              enableRosetta = true;
+              user = "stianfroystein";
+              autoMigrate = true;
+            };
+          }
+        ];
       };
     };
 }
