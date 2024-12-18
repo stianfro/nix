@@ -12,6 +12,7 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager }:
     let
+      revision = self.rev or self.dirtyRev or null;
       config_darwin = import ./config/darwin.nix;
     in
     {
@@ -21,7 +22,10 @@
         modules = [
           config_darwin
           nix-homebrew.darwinModules.nix-homebrew
+
           {
+            nixpkgs.hostPlatform = "aarch64-darwin";
+            system.configurationRevision = revision;
             nix-homebrew = {
               enable = true;
               enableRosetta = true;

@@ -76,10 +76,5 @@
   };
 
   nix.settings.experimental-features = "nix-command flakes";
-
-  system.configurationRevision = config.system.configurationRevision;
-
   system.stateVersion = 5;
-
-  nixpkgs.hostPlatform = "aarch64-darwin";
 }
