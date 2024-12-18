@@ -27,6 +27,8 @@
             autoMigrate = true;
           };
 
+          users.users.stianfroystein.home = "/Users/stianfroystein";
+
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.stianfroystein = import ./config/home.nix;
