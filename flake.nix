@@ -17,7 +17,6 @@
           [
             pkgs.neovim
             pkgs.tmux
-            pkgs.wezterm
             pkgs.mkalias
             pkgs.oh-my-posh
             pkgs.fish
@@ -29,13 +28,12 @@
             pkgs.tree-sitter
             pkgs.lazygit
             pkgs.ripgrep
-            pkgs.nodejs-slim
+            pkgs.nodejs_23
             pkgs.python3Minimal
             pkgs.btop
           ];
 
         fonts.packages = [
-          # (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
           pkgs.nerd-fonts.jetbrains-mono
         ];
 
@@ -47,6 +45,7 @@
           casks = [
             "firefox"
             "linearmouse"
+            "wezterm"
           ];
           masApps = {
             "Pure Paste" = 1611378436;
@@ -77,6 +76,19 @@
               ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
             done
           '';
+
+        system.defaults =
+          {
+            dock.autohide = true;
+            dock.persistent-apps = [
+              "/Applications/Safari.app"
+              "/Applications/Firefox.app"
+              "/Applications/WezTerm.app"
+            ];
+            finder.FXPreferredViewStyle = "clmv";
+            NSGlobalDomain.AppleICUForce24HourTime = true;
+            NSGlobalDomain.AppleInterfaceStyle = "Dark";
+          };
 
         # Necessary for using flakes on this system.
         nix.settings.experimental-features = "nix-command flakes";
