@@ -13,16 +13,15 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager }:
     let
       revision = self.rev or self.dirtyRev or null;
+      config_default = import ./config/default.nix;
       config_darwin = import ./config/darwin.nix;
     in
     {
-      # Build darwin flake using:
-      # $ darwin-rebuild build --flake .#simple
       darwinConfigurations.m1 = nix-darwin.lib.darwinSystem {
         modules = [
+          config_default
           config_darwin
           nix-homebrew.darwinModules.nix-homebrew
-
           {
             nixpkgs.hostPlatform = "aarch64-darwin";
             system.configurationRevision = revision;
@@ -32,6 +31,8 @@
               user = "stianfroystein";
               autoMigrate = true;
             };
+            nix.settings.experimental-features = "nix-command flakes";
+            system.stateVersion = 5;
           }
         ];
       };
