@@ -16,6 +16,7 @@
           [
             pkgs.neovim
             pkgs.tmux
+            pkgs.wezterm
           ];
 
         # Necessary for using flakes on this system.
