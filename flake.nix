@@ -23,7 +23,26 @@
             pkgs.fish
             pkgs.go
             pkgs.rustup
+            pkgs.wget
+            pkgs.curl
+            pkgs.zoxide
+            pkgs.tree-sitter
+            pkgs.lazygit
+            pkgs.ripgrep
+            pkgs.nodejs-slim
+            pkgs.python
+            pkgs.btop
           ];
+
+        homebrew = {
+          enable = true;
+          casks = [
+            "firefox"
+            "karabiner-elements"
+            "linearmouse"
+          ];
+          onActivation.cleanup = "zap";
+        };
 
         system.activationScripts.applications.text =
           let
