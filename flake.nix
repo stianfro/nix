@@ -44,7 +44,10 @@
             "karabiner-elements"
             "linearmouse"
           ];
-          masApps = { };
+          masApps = {
+            "Pure Paste" = 1611378436;
+            "Dato" = 1470584107;
+          };
           onActivation.cleanup = "zap";
         };
 
