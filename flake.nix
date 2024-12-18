@@ -18,6 +18,11 @@
             pkgs.tmux
             pkgs.wezterm
             pkgs.mkalias
+            pkgs.firefox
+            pkgs.oh-my-posh
+            pkgs.fish
+            pkgs.go
+            pkgs.rustup
           ];
 
         system.activationScripts.applications.text =
