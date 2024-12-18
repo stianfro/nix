@@ -46,14 +46,15 @@
           ];
           casks = [
             "firefox"
-            "karabiner-elements"
             "linearmouse"
           ];
           masApps = {
             "Pure Paste" = 1611378436;
-            "Dato" = 1470584107;
+            # "Dato" = 1470584107;
           };
           onActivation.cleanup = "zap";
+          onActivation.autoUpdate = true;
+          onActivation.upgrade = true;
         };
 
         system.activationScripts.applications.text =
