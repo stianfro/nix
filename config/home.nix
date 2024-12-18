@@ -81,4 +81,15 @@
       vim = "nvim";
     };
   };
+
+  programs.oh-my-posh = {
+    enable = true;
+    enableFishIntegration = true;
+    enableZshIntegration = true;
+    useTheme = "catppuccin_mocha";
+  };
+
+  programs.k9s = {
+    enable = true;
+  };
 }
