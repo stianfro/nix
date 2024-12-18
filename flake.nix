@@ -18,17 +18,24 @@
 
         {
           nixpkgs.hostPlatform = "aarch64-darwin";
-          system.configurationRevision = self.rev or self.dirtyRev or null;
+
+          nix.settings.experimental-features = "nix-command flakes";
           nix-homebrew = {
             enable = true;
             enableRosetta = true;
             user = "stianfroystein";
             autoMigrate = true;
           };
-          nix.settings.experimental-features = "nix-command flakes";
+
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.stianfroystein = import ./config/home.nix;
+
+          system.configurationRevision = self.rev or self.dirtyRev or null;
           system.stateVersion = 5;
         }
 
+        home-manager.darwinModules.home-manager
         nix-homebrew.darwinModules.nix-homebrew
       ];
     };
