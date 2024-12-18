@@ -15,7 +15,7 @@
       modules = [
         ./config/default.nix
         ./config/darwin.nix
-        nix-homebrew.darwinModules.nix-homebrew
+
         {
           nixpkgs.hostPlatform = "aarch64-darwin";
           system.configurationRevision = self.rev or self.dirtyRev or null;
@@ -28,6 +28,8 @@
           nix.settings.experimental-features = "nix-command flakes";
           system.stateVersion = 5;
         }
+
+        nix-homebrew.darwinModules.nix-homebrew
       ];
     };
   };
