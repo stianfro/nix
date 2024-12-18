@@ -36,11 +36,15 @@
 
         homebrew = {
           enable = true;
+          brews = [
+            "mas"
+          ];
           casks = [
             "firefox"
             "karabiner-elements"
             "linearmouse"
           ];
+          masApps = { };
           onActivation.cleanup = "zap";
         };
 
