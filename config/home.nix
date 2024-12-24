@@ -46,6 +46,7 @@
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
     ".config/wezterm/wezterm.lua".source = ./dotfiles/wezterm.lua;
+    ".config/tmux/tmux.conf".source = ./dotfiles/tmux.conf;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
