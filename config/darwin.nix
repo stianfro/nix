@@ -8,6 +8,8 @@
       "firefox"
       "linearmouse"
       "wezterm"
+      "steam"
+      "1password"
     ];
     masApps = {
       "Pure Paste" = 1611378436;
