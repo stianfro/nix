@@ -90,6 +90,13 @@
       lg = "lazygit";
       vim = "nvim";
     };
+    functions = {
+      gclone = ''
+        set dir (echo $argv | sed 's/^http\(s*\):\/\///g' | sed 's/^git@//g' | sed 's/\.git$//g' | sed 's/:/\//g')
+        git clone $argv "$HOME/src/$dir"
+        cd "$HOME/src/$dir"
+      '';
+    };
   };
 
   programs.oh-my-posh = {
