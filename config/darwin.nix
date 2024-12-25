@@ -42,7 +42,6 @@
   system.defaults = {
     dock.autohide = true;
     dock.persistent-apps = [
-      "/Applications/Safari.app"
       "/Applications/Firefox.app"
       "/Applications/WezTerm.app"
     ];
