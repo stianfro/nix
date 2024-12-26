@@ -3,13 +3,20 @@
 {
   homebrew = {
     enable = true;
-    brews = [ "mas" ];
+    brews = [
+      "mas"
+      "kind"
+    ];
     casks = [
       "firefox"
       "linearmouse"
       "wezterm"
       "steam"
       "1password"
+      "hammerspoon"
+      "docker"
+      "karabiner-elements"
+      "utm"
     ];
     masApps = {
       "Pure Paste" = 1611378436;
