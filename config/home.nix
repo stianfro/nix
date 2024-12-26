@@ -92,6 +92,9 @@
       lg = "lazygit";
       vim = "nvim";
     };
+    shellInit = ''
+      fish_vi_key_bindings
+    '';
     functions = {
       gclone = ''
         set dir (echo $argv | sed 's/^http\(s*\):\/\///g' | sed 's/^git@//g' | sed 's/\.git$//g' | sed 's/:/\//g')
