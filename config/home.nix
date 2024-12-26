@@ -48,6 +48,7 @@
     ".config/wezterm/wezterm.lua".source = ./dotfiles/wezterm.lua;
     ".config/tmux/tmux.conf".source = ./dotfiles/tmux.conf;
     ".hammerspoon/init.lua".source = ./dotfiles/hammerspoon.lua;
+    ".config/karabiner/karabiner.json".source = ./dotfiles/karabiner.json;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
