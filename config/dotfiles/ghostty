@@ -1,2 +1,2 @@
 theme = catppuccin-mocha
-command = fish
+command = /run/current-system/sw/bin/fish
