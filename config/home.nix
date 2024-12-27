@@ -120,4 +120,15 @@
     addKeysToAgent = "yes";
     extraConfig = "UseKeychain yes";
   };
+
+  programs.zoxide = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+
+  # programs.tmux = {
+  #   enable = true;
+  #   prefix = "C-Space";
+  #   keyMode = "vi";
+  # };
 }
