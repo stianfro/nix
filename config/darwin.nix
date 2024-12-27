@@ -17,6 +17,7 @@
       "docker"
       "karabiner-elements"
       "utm"
+      "ghostty"
     ];
     masApps = {
       "Pure Paste" = 1611378436;
