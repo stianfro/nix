@@ -49,6 +49,7 @@
     ".config/tmux/tmux.conf".source = ./dotfiles/tmux.conf;
     ".hammerspoon/init.lua".source = ./dotfiles/hammerspoon.lua;
     ".config/karabiner/karabiner.json".source = ./dotfiles/karabiner.json;
+    ".config/ghostty/config".source = ./dotfiles/ghostty;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
