@@ -3,7 +3,7 @@ hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "W", function()
 end)
 
 hs.hotkey.bind({ "cmd" }, "return", function()
-	hs.application.open("WezTerm")
+	hs.application.open("Ghostty")
 end)
 
 hs.hotkey.bind({ "cmd", "ctrl", "alt", "shift" }, "H", function()
@@ -31,36 +31,6 @@ hs.hotkey.bind({ "cmd", "ctrl", "alt", "shift" }, "L", function()
 	f.h = max.h
 	win:setFrame(f)
 end)
-
--- not optimal
--- hs.hotkey.bind({ "cmd", "ctrl", "alt", "shift" }, "H", function()
---   local space = hs.spaces.focusedSpace()
---   local spaces = hs.spaces.spacesForScreen()
---
---   for i, x in pairs(spaces) do
---     if x == space then
---       S = i
---     end
---   end
---
---   local spaceleft = spaces[S - 1]
---
---   hs.spaces.gotoSpace(spaceleft)
--- end)
--- hs.hotkey.bind({ "cmd", "ctrl", "alt", "shift" }, "L", function()
---   local space = hs.spaces.focusedSpace()
---   local spaces = hs.spaces.spacesForScreen()
---
---   for i, x in pairs(spaces) do
---     if x == space then
---       S = i
---     end
---   end
---
---   local spaceright = spaces[S + 1]
---
---   hs.spaces.gotoSpace(spaceright)
--- end)
 
 hs.hotkey.bind({ "cmd", "ctrl", "alt", "shift" }, "R", function()
 	hs.reload()
