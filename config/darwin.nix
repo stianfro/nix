@@ -3,9 +3,13 @@
 {
   homebrew = {
     enable = true;
+    taps = [
+      "koekeishiya/formulae"
+    ];
     brews = [
       "mas"
       "kind"
+      "koekeishiya/formulae/yabai"
     ];
     casks = [
       "firefox"
