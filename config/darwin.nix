@@ -5,11 +5,13 @@
     enable = true;
     taps = [
       "koekeishiya/formulae"
+      "FelixKratz/formulae"
     ];
     brews = [
       "mas"
       "kind"
       "yabai"
+      "borders"
     ];
     casks = [
       "firefox"
@@ -57,6 +59,8 @@
     dock.persistent-apps = [
       "/Applications/Firefox.app"
       "/Applications/Ghostty.app"
+      "/Applications/Visual Studio Code.app"
+      "/Applications/System Settings.app"
     ];
     dock.show-recents = false;
     finder.FXPreferredViewStyle = "clmv";
