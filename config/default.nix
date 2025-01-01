@@ -23,6 +23,7 @@
     pkgs.ranger
     pkgs.macchina
     pkgs.btop
+    pkgs.golangci-lint
   ];
 
   fonts.packages = [
