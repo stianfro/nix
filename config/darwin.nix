@@ -51,7 +51,6 @@
     dock.autohide = true;
     dock.persistent-apps = [
       "/Applications/Firefox.app"
-      "/Applications/WezTerm.app"
       "/Applications/Ghostty.app"
     ];
     dock.show-recents = false;
