@@ -22,6 +22,7 @@
       "karabiner-elements"
       "utm"
       "ghostty"
+      "visual-studio-code"
     ];
     masApps = {
       "Pure Paste" = 1611378436;
