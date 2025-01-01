@@ -22,3 +22,6 @@ yabai -m rule --add app="^ClickUp$" manage=off
 yabai -m rule --add app="^To Do$" manage=off
 yabai -m rule --add title="Dato" manage=off
 
+yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
+yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --layout bsp'
+
