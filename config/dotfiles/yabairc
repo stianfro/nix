@@ -5,8 +5,8 @@ yabai -m config bottom_padding 5
 yabai -m config left_padding   5
 yabai -m config right_padding  5
 yabai -m config window_gap     5
-# yabai -m config window_shadow float
-# yabai -m config window_opacity on
+yabai -m config window_shadow float
+yabai -m config window_opacity on
 
 yabai -m config window_shadow                off
 yabai -m config window_border                off
@@ -22,15 +22,10 @@ yabai -m config normal_window_opacity        0.90
 
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Dato.+" manage=off
-yabai -m rule --add app="^Intility - Sign In$" manage=off
 yabai -m rule --add app="^1Password$" manage=off
-yabai -m rule --add app="^Cisco AnyConnect Secure Mobility Client$" manage=off
-yabai -m rule --add app="^Cisco Secure Client$" manage=off
 yabai -m rule --add app="^CleanShot X$" manage=off
 yabai -m rule --add app="^Steam$" manage=off
 yabai -m rule --add app="^ClickUp$" manage=off
-yabai -m rule --add app="^Avdelingsledermøte$" manage=off
 yabai -m rule --add app="^To Do$" manage=off
-yabai -m rule --add app="^Meeting in.+" manage=off
 yabai -m rule --add title="Dato" manage=off
 
