@@ -32,6 +32,14 @@ hs.hotkey.bind({ "cmd" }, "right", function()
 	win:setFrame(f)
 end)
 
+hs.hotkey.bind({ "cmd" }, "up", function()
+	local win = hs.window.focusedWindow()
+	local screen = win:screen()
+	local max = screen:frame()
+
+	win:setFrame(max)
+end)
+
 hs.hotkey.bind({ "cmd", "ctrl", "alt", "shift" }, "R", function()
 	hs.reload()
 end)
