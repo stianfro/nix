@@ -20,6 +20,9 @@
     pkgs.btop
     pkgs.tree
     pkgs.babelfish
+    pkgs.ranger
+    pkgs.macchina
+    pkgs.btop
   ];
 
   fonts.packages = [
