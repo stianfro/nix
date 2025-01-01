@@ -60,7 +60,7 @@
       "/Applications/Firefox.app"
       "/Applications/Ghostty.app"
       "/Applications/Visual Studio Code.app"
-      "/Applications/System Settings.app"
+      "/System/Applications/System Settings.app"
     ];
     dock.show-recents = false;
     finder.FXPreferredViewStyle = "clmv";
