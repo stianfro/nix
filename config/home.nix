@@ -50,7 +50,7 @@
     ".hammerspoon/init.lua".source = ./dotfiles/hammerspoon.lua;
     ".config/karabiner/karabiner.json".source = ./dotfiles/karabiner.json;
     ".config/ghostty/config".source = ./dotfiles/ghostty;
-    ".yabairc".source = ./dotfiles/yabairc;
+    ".config/yabai/yabairc".source = ./dotfiles/yabairc;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
