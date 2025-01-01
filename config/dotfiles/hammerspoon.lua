@@ -1,3 +1,5 @@
+hs.application.enableSpotlightForNameSearches(true)
+
 hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "W", function()
 	hs.notify.new({ title = "Hammerspoon", informativeText = "Hello world!" }):send()
 end)
@@ -40,8 +42,11 @@ hs.hotkey.bind({ "cmd", "ctrl", "alt", "shift" }, "R", function()
 	hs.reload()
 end)
 
-if not hs.application:isRunning("Ghostty") then
+local app = hs.application.get("Ghostty")
+
+if app == nil or not app:isRunning() then
 	hs.hotkey.bind({ "cmd" }, "return", function()
 		hs.application.open("Ghostty")
+		hs.reload()
 	end)
 end
