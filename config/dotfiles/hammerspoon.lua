@@ -2,10 +2,6 @@ hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "W", function()
 	hs.notify.new({ title = "Hammerspoon", informativeText = "Hello world!" }):send()
 end)
 
-hs.hotkey.bind({ "cmd" }, "return", function()
-	hs.application.open("Ghostty")
-end)
-
 hs.hotkey.bind({ "cmd" }, "left", function()
 	local win = hs.window.focusedWindow()
 	local f = win:frame()

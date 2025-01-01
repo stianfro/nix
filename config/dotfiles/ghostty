@@ -8,3 +8,6 @@ keybind = cmd+ctrl+alt+shift+h=goto_split:left
 keybind = cmd+ctrl+alt+shift+l=goto_split:right
 keybind = cmd+ctrl+alt+shift+j=goto_split:bottom
 keybind = cmd+ctrl+alt+shift+k=goto_split:top
+
+keybind = global:cmd+enter=new_window
+
