@@ -9,7 +9,7 @@
     brews = [
       "mas"
       "kind"
-      "koekeishiya/formulae/yabai"
+      "yabai"
     ];
     casks = [
       "firefox"
