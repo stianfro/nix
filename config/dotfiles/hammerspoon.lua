@@ -39,3 +39,9 @@ end)
 hs.hotkey.bind({ "cmd", "ctrl", "alt", "shift" }, "R", function()
 	hs.reload()
 end)
+
+if not hs.application:isRunning("Ghostty") then
+	hs.hotkey.bind({ "cmd" }, "return", function()
+		hs.application.open("Ghostty")
+	end)
+end
