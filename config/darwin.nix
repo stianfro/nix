@@ -25,6 +25,7 @@
       "utm"
       "ghostty"
       "visual-studio-code"
+      "chatgpt"
     ];
     masApps = {
       "Pure Paste" = 1611378436;
@@ -60,6 +61,7 @@
       "/Applications/Firefox.app"
       "/Applications/Ghostty.app"
       "/Applications/Visual Studio Code.app"
+      "/Applications/ChatGPT.app"
       "/System/Applications/System Settings.app"
     ];
     dock.show-recents = false;
