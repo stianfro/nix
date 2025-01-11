@@ -24,4 +24,4 @@ yabai -m rule --add app="^ClickUp$" manage=off
 yabai -m rule --add app="^To Do$" manage=off
 yabai -m rule --add title="Dato" manage=off
 
-borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=2.0 hidpi=on &
+# borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=2.0 hidpi=on &
