@@ -33,3 +33,7 @@ end)
 hs.hotkey.bind(hyper, "s", function()
 	hs.execute("/opt/homebrew/bin/yabai -m window --focus south")
 end)
+
+hs.hotkey.bind(hyper, "t", function()
+	hs.execute("/opt/homebrew/bin/yabai -m window --toggle float")
+end)
