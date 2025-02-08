@@ -26,6 +26,7 @@
       "ghostty"
       "visual-studio-code"
       "chatgpt"
+      "yacreader"
     ];
     masApps = {
       "Pure Paste" = 1611378436;
